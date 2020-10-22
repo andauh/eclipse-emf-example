@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/de.andhub.example.emf.todo/src-gen" creationIcons="false"
+    editDirectory="/de.andhub.example.emf.todo.edit/src-gen" editorDirectory="/de.andhub.example.emf.todo.editor/src-gen"
+    modelPluginID="de.andhub.example.emf.todo" modelName="Todo" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>todo.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Todo" basePackage="de.andhub.example.emf" disposableProviderFactory="true"
+      ecorePackage="todo.ecore#/">
+    <genDataTypes ecoreDataType="todo.ecore#//ZonedDateTime"/>
+    <genClasses ecoreClass="todo.ecore#//TodoSystem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference todo.ecore#//TodoSystem/user"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference todo.ecore#//TodoSystem/categories"/>
+    </genClasses>
+    <genClasses ecoreClass="todo.ecore#//User">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute todo.ecore#//User/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute todo.ecore#//User/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference todo.ecore#//User/todoentry"/>
+    </genClasses>
+    <genClasses ecoreClass="todo.ecore#//Category">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute todo.ecore#//Category/name"/>
+    </genClasses>
+    <genClasses ecoreClass="todo.ecore#//TodoEntry">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference todo.ecore#//TodoEntry/category"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute todo.ecore#//TodoEntry/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute todo.ecore#//TodoEntry/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute todo.ecore#//TodoEntry/dueDate"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
