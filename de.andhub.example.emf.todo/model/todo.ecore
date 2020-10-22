@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="todo" nsURI="http://www.example.org/todo" nsPrefix="todo">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="todo" nsURI="http://www.andhub.de/emf" nsPrefix="todo">
   <eClassifiers xsi:type="ecore:EClass" name="TodoSystem">
     <eStructuralFeatures xsi:type="ecore:EReference" name="user" upperBound="-1" eType="#//User"
         containment="true"/>
