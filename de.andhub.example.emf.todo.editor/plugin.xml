@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated todo -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="de.andhub.example.emf.todo.presentation.TodoModelWizardID"
+            name="%_UI_TodoModelWizard_label"
+            class="de.andhub.example.emf.todo.presentation.TodoModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TodoModelFile.gif">
+         <description>%_UI_TodoModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated todo -->
+      <editor
+            id="de.andhub.example.emf.todo.presentation.TodoEditorID"
+            name="%_UI_TodoEditor_label"
+            icon="icons/full/obj16/TodoModelFile.gif"
+            extensions="todo"
+            class="de.andhub.example.emf.todo.presentation.TodoEditor"
+            contributorClass="de.andhub.example.emf.todo.presentation.TodoActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
