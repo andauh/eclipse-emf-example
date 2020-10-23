@@ -12,13 +12,13 @@
       ecorePackage="todo.ecore#/">
     <genDataTypes ecoreDataType="todo.ecore#//ZonedDateTime"/>
     <genClasses ecoreClass="todo.ecore#//TodoSystem">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference todo.ecore#//TodoSystem/user"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference todo.ecore#//TodoSystem/users"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference todo.ecore#//TodoSystem/categories"/>
     </genClasses>
     <genClasses ecoreClass="todo.ecore#//User">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute todo.ecore#//User/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute todo.ecore#//User/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference todo.ecore#//User/todoentry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference todo.ecore#//User/todoEntries"/>
     </genClasses>
     <genClasses ecoreClass="todo.ecore#//Category">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute todo.ecore#//Category/name"/>
