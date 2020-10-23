@@ -13,24 +13,16 @@ import de.andhub.example.emf.todo.TodoSystem;
 
 public class DeserializationExample {
 	public static void main(String[] args) {
-        // Initialize the model
         TodoPackage.eINSTANCE.eClass();
 
-        // Register the XMI resource factory for the .website extension
+        Resource.Factory.Registry registry = Resource.Factory.Registry.INSTANCE;
+        Map<String, Object> extensionToFactoryMap = registry.getExtensionToFactoryMap();
+        extensionToFactoryMap.put("todo", new XMIResourceFactoryImpl());
 
-        Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
-        Map<String, Object> m = reg.getExtensionToFactoryMap();
-        m.put("todo", new XMIResourceFactoryImpl());
-
-        // Obtain a new resource set
         ResourceSet resSet = new ResourceSetImpl();
-        
 
-        // Get the resource
-        Resource resource = resSet.getResource(URI
-                .createURI("resources/My.todo"), true);
-        // Get the first model element and cast it to the right type, in my
-        // example everything is hierarchical included in this first node
+        Resource resource = resSet.getResource(URI.createURI("resources/My.todo"), true);
+        
         TodoSystem todo = (TodoSystem) resource.getContents().get(0);
 	}
 }
