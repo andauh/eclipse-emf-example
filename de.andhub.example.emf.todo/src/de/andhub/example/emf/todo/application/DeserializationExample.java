@@ -21,8 +21,10 @@ public class DeserializationExample {
 
         ResourceSet resSet = new ResourceSetImpl();
 
-        Resource resource = resSet.getResource(URI.createURI("resources/My.todo"), true);
+        Resource resource = resSet.getResource(URI.createURI("resources/serializedModelInstanceGeneratedWithEditor.todo"), true);
         
         TodoSystem todo = (TodoSystem) resource.getContents().get(0);
+        
+        System.out.println(todo);
 	}
 }

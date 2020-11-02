@@ -55,6 +55,7 @@ public class SerializationExample {
 
 		try {
 			resource.save(Collections.EMPTY_MAP);
+			System.out.println("Serialized model instance.");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

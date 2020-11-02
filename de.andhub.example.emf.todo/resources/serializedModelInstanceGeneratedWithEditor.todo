@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<todo:TodoSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:todo="http://www.andhub.de/emf">
+  <users name="User1">
+    <todoEntries category="//@categories.0" title="Title1User1" description="Desc1User1"/>
+    <todoEntries category="//@categories.1" title="Title2User1" description="Desc2User1"/>
+  </users>
+  <users id="1" name="User2">
+    <todoEntries category="//@categories.0" title="Title1User1" description="Desc1User1"/>
+    <todoEntries category="//@categories.1" title="Title2User2" description="Desc2User2"/>
+  </users>
+  <categories name="cat1"/>
+  <categories name="cat2"/>
+</todo:TodoSystem>
