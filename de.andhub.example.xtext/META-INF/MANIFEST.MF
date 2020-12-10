@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: de.andhub.example.xtext
+Bundle-ManifestVersion: 2
+Bundle-Name: de.andhub.example.xtext
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: de.andhub.example.xtext; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: de.andhub.example.emf.todo,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: de.andhub.example.xtext.parser.antlr,
+ de.andhub.example.xtext.formatting2,
+ de.andhub.example.xtext.parser.antlr.internal,
+ de.andhub.example.xtext.services,
+ de.andhub.example.xtext.serializer,
+ de.andhub.example.xtext.generator,
+ de.andhub.example.xtext,
+ de.andhub.example.xtext.validation,
+ de.andhub.example.xtext.scoping
+Import-Package: org.apache.log4j
