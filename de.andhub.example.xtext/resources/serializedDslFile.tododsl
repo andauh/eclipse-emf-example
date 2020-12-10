@@ -1,0 +1,30 @@
+TodoSystem {
+	users {
+		User 1 {
+			name Hans
+			todoEntries {
+				TodoEntry{
+					title title1hans
+					description desc1hans
+					category cat1
+				}
+			}
+		},
+		User 2 {
+			name Hansine
+			todoEntries {
+				TodoEntry{
+					title title1hansine
+					description desc1hansine
+					category cat2
+				}
+			}
+		}
+	}
+	
+	categories {
+		Category cat1, 
+		Category cat2
+	}	
+}
+
